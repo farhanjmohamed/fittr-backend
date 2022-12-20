@@ -18,4 +18,5 @@ Content-Type: application/json
   "password": "password"
 }
 
-
+### Items Routes
+GET http://localhost:3000/items.json
