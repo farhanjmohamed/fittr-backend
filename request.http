@@ -18,5 +18,34 @@ Content-Type: application/json
   "password": "password"
 }
 
-### Items Routes
+######################## Items Routes #####################
+### Index
 GET http://localhost:3000/items.json
+
+### Show
+GET http://localhost:3000/items/2.json
+
+### Create
+POST http://localhost:3000/items.json
+Content-Type: application/json
+
+{
+  "name": "test2",
+  "description:": "test2 test2 test2",
+  "img_url": "test2.png",
+  "category_id": 1
+}
+
+### Update
+PATCH http://localhost:3000/items/2.json
+Content-Type: application/json
+
+{
+  "name": "test clothing",
+  "description:": "test1 test2 test3",
+  "img_url": "test3.png",
+  "category_id": 1
+}
+
+### Destroy
+DELETE http://localhost:3000/items/2.json
