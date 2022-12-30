@@ -28,3 +28,4 @@ Item.create!(name: "1460 Rick Owens Leather Boots", description: "testing testin
 Item.create!(name: "Yohji Yamamoto A.A.R Wool Blend Suit", description: "testing testing", img_url: "https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:1400/output=quality:50/compress/82NJAHudSWyGcGQBhCq5", category_id: 5, closet_id: 1)
 Item.create!(name: "Alyx Metal Buckle Bracelet", description: "testing testing", img_url: "https://cdn.shopify.com/s/files/1/2138/3643/products/AAUJW0214OT01_GRY0002_CS23_2_61c6202f-027d-47af-b3df-d3c42c8afddc_1024x.png?v=1666021231", category_id: 6, closet_id: 1)
 Item.create!(name: "Seattle Mariners Hat", description: "testing testing", img_url: "https://fanatics.frgimages.com/seattle-mariners/mens-new-era-navy-seattle-mariners-authentic-collection-on-field-59fifty-fitted-hat_pi2659000_ff_2659206_full.jpg?_hv=2&w=600", category_id: 6, closet_id: 1)
+

@@ -40,6 +40,6 @@ class ItemsController < ApplicationController
 
     item.destroy
 
-    render json: { message: "you've successfully deleted this item!" }
+    render json: { message: "item deleted!" }
   end
 end
