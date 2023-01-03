@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   ### Sessions Routes ###
   post "/sessions" => "sessions#create"
 
-  ## Item Routes ###
+  ### Item Routes ###
   get "/items" => "items#index"
   get "/items/:id" => "items#show"
   post "/items" => "items#create"
   patch "/items/i:d" => "items#update"
   delete "/items/:id" => "items#destroy"
+
+  ### Category Routes ###
+  get "/categories" => "categories#index"
 end
