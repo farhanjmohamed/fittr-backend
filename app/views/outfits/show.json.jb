@@ -1,0 +1,5 @@
+{
+  id: @outfit.id,
+  created_at: @outfit.created_at,
+  updated_at: @outfit.updated_at
+}
