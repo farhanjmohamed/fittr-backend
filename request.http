@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzMwNTYxNDh9.4frhKo_0gGB3-wT-0noW3FtBtwxgdpNpi_bsa8mvISg
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
@@ -53,4 +55,11 @@ DELETE http://localhost:3000/items/2.json
 
 ############## Outfit Items ##############
 ### Create
-POST http://localhost:3000/
+POST http://localhost:3000/outfit_items
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "outfit_id": 1,
+  "item_id": 1
+}

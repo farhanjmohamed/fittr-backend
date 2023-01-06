@@ -22,4 +22,5 @@ Rails.application.routes.draw do
 
   ### Outfit_Items Routes ###
   get "/outfit_items" => "outfit_items#index"
+  post "/outfit_items" => "outfit_items#create"
 end

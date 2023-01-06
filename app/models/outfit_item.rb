@@ -1,4 +1,4 @@
 class OutfitItem < ApplicationRecord
-  belongs_to :items
-  belongs_to :outfits
+  belongs_to :item
+  belongs_to :outfit
 end

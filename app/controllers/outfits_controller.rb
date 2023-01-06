@@ -9,10 +9,19 @@ class OutfitsController < ApplicationController
     outfit = Outfit.new(name: params["name"], user_id: current_user.id)
 
     if outfit.save
+      items_in_outfit = JSON.parse(params["outfit"])
+
+      items_in_outfit.each do |i|
+        outfit_item = OutfitItem.new(outfit_id: outfit.id, item_id: i["id"])
+        outfit_item.save
+      end
+
       render json: outfit.as_json
     else
       render json: { errors: outfit.errors.full_messages }, status: 422
     end
+
+    pp items_in_outfit
   end
 
   def show
