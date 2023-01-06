@@ -15,4 +15,11 @@ Rails.application.routes.draw do
 
   ### Category Routes ###
   get "/categories" => "categories#index"
+
+  ### Outfit Routes ###
+  get "/outfits" => "outfits#index"
+  post "/outfits" => "outfits#create"
+
+  ### Outfit_Items Routes ###
+  get "/outfit_items" => "outfit_items#index"
 end

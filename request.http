@@ -49,3 +49,8 @@ Content-Type: application/json
 
 ### Destroy
 DELETE http://localhost:3000/items/2.json
+
+
+############## Outfit Items ##############
+### Create
+POST http://localhost:3000/
