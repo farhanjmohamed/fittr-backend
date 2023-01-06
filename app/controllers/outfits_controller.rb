@@ -1,8 +1,8 @@
 class OutfitsController < ApplicationController
   def index
-    outfits = Outfit.all
+    @outfits = Outfit.all
 
-    render json: outfits.as_json
+    render template: "outfits/index"
   end
 
   def create

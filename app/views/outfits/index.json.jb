@@ -1,6 +1,7 @@
 @outfits.map do |outfit|
   {
     id: outfit.id,
-    name: outfit.name
+    name: outfit.name,
+    items: outfit.items
   }
 end
