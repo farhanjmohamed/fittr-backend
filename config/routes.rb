@@ -18,7 +18,9 @@ Rails.application.routes.draw do
 
   ### Outfit Routes ###
   get "/outfits" => "outfits#index"
+  get "/outfits/:id" => "outfits#show"
   post "/outfits" => "outfits#create"
+  patch "/outfits/:id" => "outfits#update"
   delete "/outfits/:id" => "outfits#destroy"
 
   ### Outfit_Items Routes ###
