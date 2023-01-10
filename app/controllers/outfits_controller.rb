@@ -26,21 +26,33 @@ class OutfitsController < ApplicationController
 
   def show
     id = params["id"]
-    outfit = Outfit.find(id)
+    @outfit = Outfit.find(id)
 
-    render json: outfit.as_json
+    render template: "outfits/show"
   end
 
   def update
     id = params["id"]
-    outfit = Outfit.find(id)
+    @outfit = Outfit.find(id)
 
-    outfit.update(
-      outfit.name = params["name"] || outfit.name
-    )
-    outfit.save
+    @outfit.name = params["name"] || @outfit.name
 
-    render json: outfit.as_json
+    @outfit_items = @outfit.outfit_items
+
+    @outfit_items.each do |outfit_item|
+      outfit_item.destroy
+    end
+
+    items_in_outfit = JSON.parse(params["outfit"])
+
+    items_in_outfit.each do |i|
+      outfit_item = OutfitItem.new(outfit_id: @outfit.id, item_id: i["id"])
+      outfit_item.save
+    end
+
+    @outfit.save
+
+    render json: @outfit.as_json
   end
 
   def destroy
