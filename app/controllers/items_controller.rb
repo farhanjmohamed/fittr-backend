@@ -5,11 +5,15 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item = Item.new(name: params[:name], description: params[:description], img_url: params[:img_url], category_id: params[:category_id])
+    pp params
 
-    item.save
+    item = Item.new(name: params[:name], description: params[:description], img_url: params[:img_url], category_id: params[:category_id], closet_id: current_user.closet.id)
 
-    render json: item.as_json
+    if item.save
+      render json: item.as_json
+    else
+      render json: { errors: item.errors.full_messages }, status: 422
+    end
   end
 
   def show

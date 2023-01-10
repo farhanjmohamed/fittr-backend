@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "/items" => "items#index"
   get "/items/:id" => "items#show"
   post "/items" => "items#create"
-  patch "/items/i:d" => "items#update"
+  patch "/items/:id" => "items#update"
   delete "/items/:id" => "items#destroy"
 
   ### Category Routes ###
@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   ### Outfit Routes ###
   get "/outfits" => "outfits#index"
   post "/outfits" => "outfits#create"
+  delete "/outfits/:id" => "outfits#destroy"
 
   ### Outfit_Items Routes ###
   get "/outfit_items" => "outfit_items#index"
