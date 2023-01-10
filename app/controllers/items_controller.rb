@@ -27,12 +27,11 @@ class ItemsController < ApplicationController
     id = params[:id]
     item = Item.find(id)
 
-    item.update(
-      item.name = params[:name] || item.name,
-      item.description = params[:description] || item.description,
-      item.img_url = params[:img_url] || item.img_url,
-      item.category_id = params[:category_id] || item.category_id
-    )
+    item.name = params[:name] || item.name
+    item.description = params[:description] || item.description
+    item.img_url = params[:img_url] || item.img_url
+    item.category_id = params[:category_id] || item.category_id
+
     item.save
 
     render json: item.as_json
